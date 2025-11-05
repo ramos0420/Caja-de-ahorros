@@ -17,23 +17,71 @@
   <main class="login-container">
     <section class="login-card">
       <div class="logo-horizontal"></div>
-      <h2>Iniciar Sesión</h2>
-      <form id="formLogin">
-        <div class="input-group">
-          <label for="usuario">Usuario</label>
-          <input type="text" id="usuario" name="usuario" placeholder="Ingresa tu usuario" required>
-        </div>
 
-        <div class="input-group">
-          <label for="password">Contraseña</label>
-          <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
-        </div>
+      <div id="divLogin">
+        <h2>Iniciar Sesión</h2>
+        <form id="formLogin">
+          <div class="input-group">
+            <label for="usuario">Correo Electrónico</label>
+            <input type="email" id="usuario" name="usuario" placeholder="Ingresa tu correo" required>
+          </div>
 
-        <button type="submit" class="btn btn-primary">Entrar</button>
-      </form>
+          <div class="input-group">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+          </div>
 
-      <p id="mensaje" class="mensaje"></p>
-      <p class="text-muted">¿Olvidaste tu contraseña? <a href="#">Recupérala aquí</a></p>
+          <button type="submit" class="btn btn-primary">Entrar</button>
+        </form>
+        <p id="mensaje" class="mensaje"></p>
+        <p class="text-muted text-sm">¿Olvidaste tu contraseña? <a href="#">Recupérala aquí</a></p>
+        <p class="text-muted text-sm">¿No tienes cuenta? <a href="#" id="linkRegistro" class="toggle-link">Regístrate</a></p>
+      </div>
+
+      <div id="divRegistro" style="display: none;">
+        <h2>Crear Cuenta</h2>
+        <form id="formRegistro">
+          <div class="input-group">
+            <label for="regNombre">Nombre Completo</label>
+            <input type="text" id="regNombre" placeholder="Tu nombre completo" required>
+          </div>
+          
+          <div class="input-group">
+            <label for="regCurp">CURP</label>
+            <input type="text" id="regCurp" placeholder="18 caracteres alfanuméricos" maxlength="18" required>
+          </div>
+
+          <div class="input-group">
+            <label for="regEmail">Correo Personal</label>
+            <input type="email" id="regEmail" placeholder="tu@correo.com" required>
+          </div>
+
+          <div class="input-group">
+            <label for="regTelefono">Número de Teléfono</label>
+            <input type="tel" id="regTelefono" placeholder="10 dígitos" maxlength="10" required>
+          </div>
+
+          <div class="input-group">
+            <label for="regPassword">Crea una Contraseña</label>
+            <input type="password" id="regPassword" placeholder="Mínimo 8 caracteres" required>
+          </div>
+
+          <div class="input-group">
+            <label for="regPasswordConfirm">Confirma tu Contraseña</label>
+            <input type="password" id="regPasswordConfirm" placeholder="Vuelve a escribirla" required>
+          </div>
+
+          <div class="terminos-group">
+            <input type="checkbox" id="regTerminos" required>
+            <label for="regTerminos">He leído y acepto los <a href="/terminos.html" target="_blank">Términos y Condiciones</a>.</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Registrarme</button>
+        </form>
+        <p id="mensajeRegistro" class="mensaje"></p>
+        <p class="text-muted text-sm">¿Ya tienes cuenta? <a href="#" id="linkLogin" class="toggle-link">Inicia Sesión</a></p>
+      </div>
+
     </section>
   </main>
 
