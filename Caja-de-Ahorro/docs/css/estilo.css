@@ -364,4 +364,34 @@ input:focus, select:focus {
     --gray-900: #f8f9fa;
   }
   body { background: var(--gray-100); color: var(--gray-900); }
+
+ 
+
+/* Estilo para los enlaces de "Regístrate" / "Inicia Sesión" */
+.toggle-link {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+.toggle-link:hover {
+  text-decoration: underline;
+}
+
+/* Grupo de Términos y Condiciones */
+.terminos-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Espacio entre el checkbox y el texto */
+  margin-bottom: var(--spacing-sm);
+  text-align: left;
+}
+.terminos-group input[type="checkbox"] {
+  width: auto; /* Hace que el checkbox no ocupe el 100% */
+}
+.terminos-group label {
+  margin-bottom: 0; /* Resetea el margen de la etiqueta */
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: var(--gray-700);
+}
 }
