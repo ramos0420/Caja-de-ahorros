@@ -63,13 +63,13 @@ if (formRegistro) {
       return;
     }
 
-    // 2. Validar CURP (simple)
+    // 2. Validar CURP 
     if (curp.length !== 18) {
       mostrarMensaje(mensaje, "La CURP debe tener 18 caracteres.", "error");
       return;
     }
     
-    // 3. Validar Teléfono (simple)
+    // 3. Validar Teléfono 
     if (telefono.length !== 10 || isNaN(telefono)) {
         mostrarMensaje(mensaje, "El teléfono debe tener 10 dígitos numéricos.", "error");
         return;
