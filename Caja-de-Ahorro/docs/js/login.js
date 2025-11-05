@@ -131,4 +131,8 @@ if (linkLogin) {
 function mostrarMensaje(elemento, texto, tipo) {
   elemento.textContent = texto;
   elemento.className = `mensaje ${tipo}`; // Asigna 'mensaje error' o 'mensaje success'
+
+
+  //--LÓGICA PARA OLVIDÉ CONTRASEÑA--//
+
 }
