@@ -2,13 +2,7 @@
 
 Este repositorio está organizado para publicar directamente en **GitHub Pages** usando la carpeta `docs/`.
 
-## ¿Cómo publicarlo?
-1. Sube todo este contenido a tu repositorio.
-2. En GitHub: **Settings → Pages → Source: Deploy from a branch**.
-3. Selecciona **Branch: main** y **Folder: /docs**. Guarda.
-4. Tu sitio quedará disponible en: `https://<usuario>.github.io/<repositorio>/`
-   - Login: `https://<usuario>.github.io/<repositorio>/html/login.html`
-   - También funciona desde la raíz por la redirección: `https://<usuario>.github.io/<repositorio>/`
+
 
 ## Estructura
 docs/
