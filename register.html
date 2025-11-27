@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/images/LogoCircular.png">
+    <title>Registro de Usuario - Caja de Ahorro</title>
+    <link rel="stylesheet" href="/css/register.css">
+    </head>
+<body class="login-page">
+
+    <div class="card login-card">
+        <img src="/images/LogoHorizontal1.png" alt="Logo" style="width:200px; margin-bottom:20px;">
+        
+        <div id="full-register-view">
+            <h2>Solicitud de Registro</h2>
+            <p style="font-size:0.9rem; color:#666; margin-bottom:20px;">Completa tu perfil de socio (Todos los campos son obligatorios).</p>
+            
+            <form id="formRegister">
+                
+                <div class="input-group">
+                    <label style="font-size: 0.9em; font-weight: bold; color: var(--primary);">DATOS PERSONALES</label>
+                    <input type="text" id="regNombre" placeholder="Nombre Completo" required>
+                </div>
+                
+                <div class="input-group">
+                    <input type="text" id="regCurp" placeholder="CURP (18 Caracteres)" maxlength="18" required>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" id="regEmail" placeholder="Correo Personal" required>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" id="regEmailInstitucional" placeholder="Correo Institucional" required>
+                </div>
+
+                <div class="input-group">
+                    <input type="tel" id="regNumero" placeholder="Número Personal" required>
+                </div>
+                
+                <div class="input-group" style="margin-top: 25px;">
+                    <label style="font-size: 0.9em; font-weight: bold; color: var(--primary);">DATOS FISCALES Y DE PAGO</label>
+                    <input type="text" id="regRfc" placeholder="RFC" maxlength="13" required>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="regTarjeta" placeholder="Cuenta o Tarjeta (16 dígitos)" inputmode="numeric" maxlength="16" pattern="[0-9]{16}" title="Debe contener 16 dígitos" required>
+                    <small style="display: block; margin-top: 5px; color: #888; font-size: 0.8em;">*Verifique su cuenta bancaria para depósitos.</small>
+                </div>
+
+                <div class="input-group" style="margin-top: 25px;">
+                    <label style="font-size: 0.9em; font-weight: bold; color: var(--primary);">CREACIÓN DE ACCESO</label>
+                    <input type="password" id="regPass1" placeholder="Crear Contraseña" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="regPass2" placeholder="Confirmar Contraseña" required>
+                </div>
+
+                <div class="terminos-box" style="text-align: left; margin-bottom: 20px;">
+                    <input type="checkbox" id="regTerminos" required style="vertical-align: middle;">
+                    <label for="regTerminos" style="display: inline; font-weight: normal; font-size: 0.9em;">
+                        He leído y acepto los <a href="#">Términos y Condiciones</a> del sindicato.
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-secondary" style="width:100%">REGISTRARSE</button>
+            </form>
+
+            <p class="mt-20">
+                ¿Ya tienes cuenta? 
+                <a href="login.html" class="link-action">Inicia Sesión</a>
+            </p>
+        </div>
+
+        <div id="mensaje" class="mensaje"></div>
+    </div>
+    <script src="/js/register.js"></script>
+
+</body>
+</html>

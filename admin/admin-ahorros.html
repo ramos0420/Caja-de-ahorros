@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Ahorros</title>
+    <link rel="icon" type="image/png" href="/images/LogoCircular.png">
+    <link rel="stylesheet" href="/css/general.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        
+        <aside class="sidebar">
+            <img src="/images/LogoCircular.png" alt="Logo">
+            <div style="text-align:center; font-weight:bold; color:white; margin-bottom:10px; opacity:0.9;">ADMINISTRACIÓN</div>
+            
+            <nav>
+                <a class="nav-link" href="admin-inicio.html"> Inicio</a>
+                <a class="nav-link" href="admin-gestion.html">Gestión Ahorradores</a>
+                <a class="nav-link active" href="admin-ahorros.html"> Ahorros</a>
+                <a class="nav-link" href="admin-prestamos.html"> Préstamos</a>
+                <a class="nav-link" href="admin-reportes.html">Reportes</a>
+                
+                <a class="nav-link" onclick="cerrarSesion()" style="margin-top:auto; color:#ff6b6b;">
+                    Cerrar Sesión
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="container">
+                
+                <header style="margin-bottom:30px;">
+                    <h2>Ahorros</h2>
+                    <p style="color:var(--text-muted);">Administración de depósitos, retiros y validación de comprobantes.</p>
+                </header>
+
+                <div id="ahorros" class="section-panel active">
+                    <div class="card">
+                        <h3>Solicitudes de Ahorro / Depósitos Pendientes</h3>
+                        <p style="color:var(--text-muted); margin-bottom:20px;">Validar comprobantes de depósitos extraordinarios.</p>
+                        
+                        <table>
+                            <thead>
+                                <tr><th>Fecha</th><th>Socio</th><th>Monto</th><th>Acción</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>19/Nov/2025</td>
+                                    <td>Roberto Gómez</td>
+                                    <td>$2,000.00</td>
+                                    <td>
+                                        <button class="btn" style="background:green; color:white; padding:5px 10px;">Validar</button>
+                                        <button class="btn" style="background:red; color:white; padding:5px 10px;">Rechazar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <script src="/js/noreturn.js"></script>
+</body>
+</html>

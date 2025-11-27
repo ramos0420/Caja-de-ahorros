@@ -1,0 +1,107 @@
+:root {
+  --primary: #2a3472; /* Azul Institucional */
+  --secondary: #d18819; /* Dorado */
+  --bg-white: #ffffff;
+  --text-dark: #1c1e21;
+  --border-color: #dadde1;
+  --radius: 8px;
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --font-main: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+* { 
+  box-sizing: border-box; 
+}
+
+/* 🛑 BASE: Asegura que el HTML tenga altura completa */
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  color: var(--text-dark);
+  font-size: 15px;
+  /* Permitir el scroll en el cuerpo si la página crece */
+  overflow-y: auto; 
+}
+
+/* Regla para el fondo de página y centrado */
+.login-page {
+  background: linear-gradient(135deg, var(--primary), #1f2655);
+  /* 🛑 CLAVE: Cambiado a min-height para permitir el scroll */
+  min-height: 100vh; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  /* Relleno para que la tarjeta no toque bordes al hacer scroll */
+  padding: 20px 0;
+}
+
+/* Regla para la tarjeta blanca */
+.login-card { 
+  width: 100%; 
+  max-width: 450px; 
+  text-align: center; 
+  padding: 40px; 
+}
+
+/* Regla para la tarjeta base */
+.card {
+  background: var(--bg-white);
+  padding: 25px; 
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card); 
+  border: 1px solid var(--border-color);
+}
+
+/* Regla para Título h2 */
+h2 { 
+  margin-top: 0; 
+  color: var(--primary); 
+}
+
+/* Regla para el botón */
+.btn {
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: var(--radius);
+  cursor: pointer; 
+  font-weight: 600; 
+  transition: 0.2s;
+  text-decoration: none; 
+  display: inline-block;
+}
+.btn-primary { 
+  background: var(--primary); 
+  color: white; 
+}
+.btn-primary:hover { 
+  background: #1f2655; 
+}
+
+/* Reglas para Inputs */
+.input-group { 
+  margin-bottom: 15px; 
+}
+.input-group input {
+  width: 100%; 
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: var(--radius);
+}
+
+/* ESTILOS DE ENLACE */
+.link-sm {
+  color: var(--primary); 
+  text-decoration: none;
+}
+.link-action {
+  color: var(--secondary); 
+  text-decoration: none;
+  font-weight: bold;
+}
+.mt-20 { 
+  margin-top: 20px; 
+}

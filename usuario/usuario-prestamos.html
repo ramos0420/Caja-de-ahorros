@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Caja - Préstamos</title>
+    <link rel="icon" type="image/png" href="/images/LogoCircular.png">
+    <link rel="stylesheet" href="/css/general.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        
+        <aside class="sidebar">
+            <img src="/images/LogoCircular.png" alt="Logo">
+            <nav>
+                <a class="nav-link" href="usuario-inicio.html"> Inicio</a>
+                <a class="nav-link" href="usuario-perfil.html"> Perfil</a>
+                <a class="nav-link" href="usuario-ahorros.html"> Ahorros</a>
+                <a class="nav-link active" href="usuario-prestamos.html"> Préstamos</a>
+                <a class="nav-link" href="usuario-reportes.html"> Consultas/Reportes</a>
+                <a class="nav-link" href="usuario-soporte.html"> Soporte</a>
+
+                <a class="nav-link" onclick="cerrarSesion()" style="margin-top:auto; color:#ff6b6b;">
+                    Cerrar Sesión
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="container">
+                
+                <header style="display:flex; justify-content:space-between; align-items:center; margin-bottom:30px;">
+                    <div>
+                        <h2>Hola, Juan Pérez</h2>
+                        <span style="color:var(--text-muted);">Socio Activo #0042</span>
+                    </div>
+                    <div class="card" style="padding:10px 20px; margin:0; background:var(--primary); color:white; border:none;">
+                        <small style="opacity:0.8;">Saldo Disponible</small>
+                        <div style="font-size:1.2rem; font-weight:bold;">$12,500.00</div>
+                    </div>
+                </header>
+
+                <div id="prestamos" class="section-panel active">
+                    <div class="card">
+                        <h3>Préstamo Vigente</h3>
+                        <div style="display:flex; justify-content:space-between; align-items:end;">
+                            <div>
+                                <h2 style="color:var(--danger); margin:0;">$5,000.00</h2>
+                                <small>Saldo Pendiente por Pagar</small>
+                            </div>
+                            <div style="text-align:right;">
+                                <strong>Próximo Pago: 30/Nov</strong>
+                                <br><span style="color:var(--text-muted);">Monto: $300.00</span>
+                            </div>
+                        </div>
+                        <div style="background:#eee; height:10px; border-radius:5px; margin-top:15px;">
+                            <div style="background:var(--success); width:40%; height:100%; border-radius:5px;"></div>
+                        </div>
+                        <small>Has pagado el 40% de tu préstamo total ($8,400)</small>
+                    </div>
+
+                    <div class="card">
+                        <h3>Solicitar Nuevo Préstamo</h3>
+                        <form>
+                            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px;">
+                                <div class="input-group">
+                                    <label>Monto Solicitado</label>
+                                    <input type="number" placeholder="$0.00" min="500">
+                                </div>
+                                <div class="input-group">
+                                    <label>Plazo de Pago</label>
+                                    <select>
+                                        <option>6 Quincenas (3 meses)</option>
+                                        <option>12 Quincenas (6 meses)</option>
+                                        <option>24 Quincenas (1 año)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Motivo del Préstamo (Opcional)</label>
+                                <input type="text" placeholder="Ej. Gastos médicos, Reparación hogar...">
+                            </div>
+                            <div class="input-group">
+                                <label>Subir Comprobante de Nómina (PDF/Imagen)</label>
+                                <input type="file" accept=".pdf,.jpg,.png">
+                            </div>
+                            <button class="btn btn-secondary">Enviar Solicitud</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <script src="/js/noreturn.js"></script>
+</body>
+</html>

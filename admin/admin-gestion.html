@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Gestión Ahorradores</title>
+    <link rel="icon" type="image/png" href="/images/LogoCircular.png">
+    <link rel="stylesheet" href="/css/general.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        
+        <aside class="sidebar">
+            <img src="/images/LogoCircular.png" alt="Logo">
+            <div style="text-align:center; font-weight:bold; color:white; margin-bottom:10px; opacity:0.9;">ADMINISTRACIÓN</div>
+            
+            <nav>
+                <a class="nav-link" href="admin-inicio.html"> Inicio</a>
+                <a class="nav-link active" href="admin-gestion.html">Gestión Ahorradores</a>
+                <a class="nav-link" href="admin-ahorros.html"> Ahorros</a>
+                <a class="nav-link" href="admin-prestamos.html"> Préstamos</a>
+                <a class="nav-link" href="admin-reportes.html">Reportes</a>
+                
+                <a class="nav-link" onclick="cerrarSesion()" style="margin-top:auto; color:#ff6b6b;">
+                    Cerrar Sesión
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="container">
+                
+                <header style="margin-bottom:30px;">
+                    <h2>Gestión Ahorradores</h2>
+                    <p style="color:var(--text-muted);">Administración del directorio de socios y sus estatus.</p>
+                </header>
+
+                <div id="gestion" class="section-panel active">
+                    <div class="card">
+                        <div style="display:flex; justify-content:space-between; align-items:center;">
+                            <h3>Directorio de Ahorradores</h3>
+                            <button class="btn btn-primary">+ Nuevo Ahorrador</button>
+                        </div>
+                        <div style="margin:20px 0;">
+                            <input type="text" placeholder="Buscar por nombre o número de empleado..." style="width:100%; padding:10px; border:1px solid #ccc; border-radius:8px;">
+                        </div>
+                        <table>
+                            <thead>
+                                <tr><th>ID</th><th>Nombre</th><th>Correo</th><th>Estatus</th><th>Acciones</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#0042</td>
+                                    <td>Juan Pérez</td>
+                                    <td>juan@correo.com</td>
+                                    <td><span style="color:green; font-weight:bold;">Activo</span></td>
+                                    <td>
+                                        <button class="btn" style="padding:5px 10px; font-size:0.8rem; background:#eee;">Editar</button>
+                                        <button class="btn" style="padding:5px 10px; font-size:0.8rem; background:#ffcccc; color:red;">Baja</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#0043</td>
+                                    <td>Ana García</td>
+                                    <td>ana@correo.com</td>
+                                    <td><span style="color:green; font-weight:bold;">Activo</span></td>
+                                    <td>
+                                        <button class="btn" style="padding:5px 10px; font-size:0.8rem; background:#eee;">Editar</button>
+                                        <button class="btn" style="padding:5px 10px; font-size:0.8rem; background:#ffcccc; color:red;">Baja</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <script src="/js/noreturn.js"></script>
+</body>
+</html>

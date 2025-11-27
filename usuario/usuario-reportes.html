@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Caja - Reportes</title>
+    <link rel="icon" type="image/png" href="/images/LogoCircular.png">
+    <link rel="stylesheet" href="/css/general.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        
+        <aside class="sidebar">
+            <img src="/images/LogoCircular.png" alt="Logo">
+            <nav>
+                <a class="nav-link" href="usuario-inicio.html"> Inicio</a>
+                <a class="nav-link" href="usuario-perfil.html"> Perfil</a>
+                <a class="nav-link" href="usuario-ahorros.html"> Ahorros</a>
+                <a class="nav-link" href="usuario-prestamos.html"> Préstamos</a>
+                <a class="nav-link active" href="usuario-reportes.html"> Consultas/Reportes</a>
+                <a class="nav-link" href="usuario-soporte.html"> Soporte</a>
+                
+                <a class="nav-link" onclick="cerrarSesion()" style="margin-top:auto; color:#ff6b6b;">
+                    Cerrar Sesión
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="container">
+                
+                <header style="display:flex; justify-content:space-between; align-items:center; margin-bottom:30px;">
+                    <div>
+                        <h2>Hola, Juan Pérez</h2>
+                        <span style="color:var(--text-muted);">Socio Activo #0042</span>
+                    </div>
+                    <div class="card" style="padding:10px 20px; margin:0; background:var(--primary); color:white; border:none;">
+                        <small style="opacity:0.8;">Saldo Disponible</small>
+                        <div style="font-size:1.2rem; font-weight:bold;">$12,500.00</div>
+                    </div>
+                </header>
+
+                <div id="reportes" class="section-panel active">
+                    <div class="card">
+                        <h3>Estado de Cuenta General</h3>
+                        <p style="color:var(--text-muted); margin-bottom:20px;">Consulta todos tus movimientos (Ahorros, Préstamos, Intereses).</p>
+                        
+                        <div style="display:flex; gap:10px; margin-bottom:20px;">
+                            <div class="input-group" style="margin:0; flex:1;">
+                                <select><option>Noviembre 2025</option><option>Octubre 2025</option><option>Septiembre 2025</option></select>
+                            </div>
+                            <button class="btn btn-primary">Consultar</button>
+                            <button class="btn btn-secondary">Descargar PDF</button>
+                        </div>
+
+                        <table>
+                            <thead>
+                                <tr><th>Fecha</th><th>Descripción</th><th>Cargo/Abono</th><th>Saldo</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>15/Nov/2025</td>
+                                    <td>Ahorro Quincenal</td>
+                                    <td style="color:green;">+$500.00</td>
+                                    <td>$12,500.00</td>
+                                </tr>
+                                <tr>
+                                    <td>15/Nov/2025</td>
+                                    <td>Abono a Préstamo</td>
+                                    <td style="color:red;">-$300.00</td>
+                                    <td>$12,200.00</td>
+                                </tr>
+                                <tr>
+                                    <td>01/Nov/2025</td>
+                                    <td>Retiro Parcial</td>
+                                    <td style="color:red;">-$1,000.00</td>
+                                    <td>$12,500.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <script src="/js/noreturn.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Super Usuario - Root</title>
+    <link rel="icon" type="image/png" href="/images/LogoCircular.png">
+    <link rel="stylesheet" href="/css/general.css">
+    </head>
+<body>
+    <div class="dashboard-layout">
+        
+        <aside class="sidebar">
+            <img src="/images/LogoCircular.png" alt="Logo">
+            <div style="text-align:center; color:var(--accent); font-weight:bold; margin-bottom:5px;">SUPER USUARIO</div>
+            <nav>
+                <a class="nav-link active" href="super-inicio.html"> Configuración</a>
+                <a class="nav-link" href="super-gestionadmin.html"> Gestión Usuarios</a>
+                <a class="nav-link" href="super-seguridadaudit.html">Seguridad/Audit</a>
+                <a class="nav-link" href="super-mantenimiento.html"> Mantenimiento</a>
+                <a class="nav-link" href="super-reportesglobales.html">Reportes Globales</a>
+                
+                <a class="nav-link" onclick="cerrarSesion()" style="margin-top:auto; color:#ff6b6b;">
+                    Cerrar Sesión
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="container">
+                <h2 style="margin-bottom:30px; color:#333;">Panel de Control Maestro</h2>
+
+                <div id="config" class="section-panel active">
+                    <div class="card">
+                        <h3>Configuración General del Sistema</h3>
+                        <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:20px;">
+                            Definición de tasas de interés, límites de crédito y reglas de negocio del sindicato.
+                        </p>
+                        <form onsubmit="event.preventDefault();">
+                            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px;">
+                                <div class="input-group">
+                                    <label>Tasa Interés Ahorro (Anual %)</label>
+                                    <input type="number" value="5.0" step="0.1">
+                                </div>
+                                <div class="input-group">
+                                    <label>Tasa Interés Préstamo (Anual %)</label>
+                                    <input type="number" value="12.0" step="0.1">
+                                </div>
+                                <div class="input-group">
+                                    <label>Monto Máximo Préstamo ($)</label>
+                                    <input type="number" value="50000">
+                                </div>
+                                <div class="input-group">
+                                    <label>Fondo de Reserva Mínimo ($)</label>
+                                    <input type="number" value="100000">
+                                </div>
+                            </div>
+                            
+                            <h4 style="margin-top:20px; border-bottom:1px solid #eee; padding-bottom:10px;">Reglas de Corte</h4>
+                            <div class="input-group">
+                                <label>Periodo de Corte y Cálculo de Intereses</label>
+                                <select>
+                                    <option>Quincenal (Día 15 y 30)</option>
+                                    <option>Mensual (Día 30)</option>
+                                    <option>Catorcenal (Viernes)</option>
+                                </select>
+                            </div>
+                            
+                            <div style="text-align:right; margin-top:20px;">
+                                <button class="btn btn-primary">Guardar Parámetros</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                </div>
+        </main>
+    </div>
+    <script src="/js/noreturn.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Caja - Soporte</title>
+    <link rel="icon" type="image/png" href="/images/LogoCircular.png">
+    <link rel="stylesheet" href="/css/general.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        
+        <aside class="sidebar">
+            <img src="/images/LogoCircular.png" alt="Logo">
+            <nav>
+                <a class="nav-link" href="usuario-inicio.html"> Inicio</a>
+                <a class="nav-link" href="usuario-perfil.html"> Perfil</a>
+                <a class="nav-link" href="usuario-ahorros.html"> Ahorros</a>
+                <a class="nav-link" href="usuario-prestamos.html"> Préstamos</a>
+                <a class="nav-link" href="usuario-reportes.html"> Consultas/Reportes</a>
+                <a class="nav-link active" href="usuario-soporte.html"> Soporte</a>
+                
+                <a class="nav-link" onclick="cerrarSesion()" style="margin-top:auto; color:#ff6b6b;">
+                    Cerrar Sesión
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="container">
+                
+                <header style="display:flex; justify-content:space-between; align-items:center; margin-bottom:30px;">
+                    <div>
+                        <h2>Hola, Juan Pérez</h2>
+                        <span style="color:var(--text-muted);">Socio Activo #0042</span>
+                    </div>
+                    <div class="card" style="padding:10px 20px; margin:0; background:var(--primary); color:white; border:none;">
+                        <small style="opacity:0.8;">Saldo Disponible</small>
+                        <div style="font-size:1.2rem; font-weight:bold;">$12,500.00</div>
+                    </div>
+                </header>
+
+                <div id="soporte" class="section-panel active">
+                    <div class="card">
+                        <h3>Centro de Ayuda</h3>
+                        <p>¿Tienes dudas sobre tu saldo o necesitas ayuda técnica? Envíanos un mensaje.</p>
+                        
+                        <form>
+                            <div class="input-group">
+                                <label>Asunto</label>
+                                <select>
+                                    <option>Duda sobre mi saldo</option>
+                                    <option>Problema con un préstamo</option>
+                                    <option>Solicitud de retiro</option>
+                                    <option>Otro</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label>Mensaje</label>
+                                <textarea rows="5" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:8px;" placeholder="Describe tu problema aquí..."></textarea>
+                            </div>
+                            <button class="btn btn-primary">Enviar Mensaje</button>
+                        </form>
+                    </div>
+
+                    <div class="card" style="background:#e3f2fd; border-color:#90caf9;">
+                        <h3>📞 Contacto Directo</h3>
+                        <p><strong>Teléfono Sindicato:</strong> (55) 5555-5555</p>
+                        <p><strong>Correo:</strong> soporte@cajadeahorro.com</p>
+                        <p><strong>Horario:</strong> Lunes a Viernes de 9:00 AM a 6:00 PM</p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <script src="/js/noreturn.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Super Usuario - Root (Reportes Globales)</title>
+    <link rel="icon" type="image/png" href="/images/LogoCircular.png">
+    <link rel="stylesheet" href="/css/general.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        
+        <aside class="sidebar">
+            <img src="/images/LogoCircular.png" alt="Logo">
+            <div style="text-align:center; color:var(--accent); font-weight:bold; margin-bottom:5px;">SUPER USUARIO</div>
+            <nav>
+                <a class="nav-link" href="super-inicio.html"> Configuración</a>
+                <a class="nav-link" href="super-gestionadmin.html"> Gestión Usuarios</a>
+                <a class="nav-link" href="super-seguridadaudit.html">Seguridad/Audit</a>
+                <a class="nav-link" href="super-mantenimiento.html"> Mantenimiento</a>
+                <a class="nav-link active" href="super-reportesglobales.html">Reportes Globales</a>
+                
+                <a class="nav-link" onclick="cerrarSesion()" style="margin-top:auto; color:#ff6b6b;">
+                    Cerrar Sesión
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="container">
+                <h2 style="margin-bottom:30px; color:#333;">Panel de Control Maestro</h2>
+
+                <div id="reportes" class="section-panel active">
+                    <div class="card">
+                        <h3>Reportes Globales</h3>
+                        
+                        <div style="display:flex; gap:15px; align-items:end; margin-bottom:20px; background:#f9f9f9; padding:15px; border-radius:8px;">
+                            <div class="input-group" style="margin:0; flex:1;">
+                                <label>Periodo</label>
+                                <select><option>Noviembre 2025</option><option>Anual 2025</option></select>
+                            </div>
+                            <div class="input-group" style="margin:0; flex:1;">
+                                <label>Tipo de Reporte</label>
+                                <select><option>Balance General</option><option>Estado de Resultados</option></select>
+                            </div>
+                            <button class="btn btn-primary">Generar</button>
+                            <button class="btn btn-secondary">Exportar PDF</button>
+                        </div>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Métrica</th>
+                                    <th>Valor</th>
+                                    <th>Comentario</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Total Ahorrado</strong></td>
+                                    <td style="color:green; font-weight:bold;">$1,250,000.00</td>
+                                    <td>Suma de todas las cuentas de socios</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Total Prestado</strong></td>
+                                    <td style="color:#d18819; font-weight:bold;">$450,000.00</td>
+                                    <td>Capital pendiente de cobro</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Intereses Generados</strong></td>
+                                    <td>$28,400.00</td>
+                                    <td>Ingresos netos por préstamos</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Índice de Morosidad</strong></td>
+                                    <td style="color:red;">2.5%</td>
+                                    <td>Cartera vencida > 30 días</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <script src="/js/noreturn.js"></script>
+</body>
+</html>

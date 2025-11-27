@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Super Usuario - Root (Gestión Usuarios)</title>
+    <link rel="icon" type="image/png" href="/images/LogoCircular.png">
+    <link rel="stylesheet" href="/css/general.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        
+        <aside class="sidebar">
+            <img src="/images/LogoCircular.png" alt="Logo">
+            <div style="text-align:center; color:var(--accent); font-weight:bold; margin-bottom:5px;">SUPER USUARIO</div>
+            <nav>
+                <a class="nav-link" href="super-inicio.html"> Configuración</a>
+                <a class="nav-link active" href="super-gestionadmin.html"> Gestión Usuarios</a>
+                <a class="nav-link" href="super-seguridadaudit.html">Seguridad/Audit</a>
+                <a class="nav-link" href="super-mantenimiento.html"> Mantenimiento</a>
+                <a class="nav-link" href="super-reportesglobales.html">Reportes Globales</a>
+                
+                <a class="nav-link" onclick="cerrarSesion()" style="margin-top:auto; color:#ff6b6b;">
+                    Cerrar Sesión
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="container">
+                <h2 style="margin-bottom:30px; color:#333;">Panel de Control Maestro</h2>
+
+                <div id="usuarios" class="section-panel active">
+                    <div class="card">
+                        <div style="display:flex; justify-content:space-between; align-items:center;">
+                            <h3>Gestión de Administradores</h3>
+                            <div style="display:flex; gap:10px;">
+                                <button class="btn btn-secondary">- Sacar Admin</button>
+                                <button class="btn btn-primary">+ Crear Admin</button>
+                            </div>
+                        </div>
+                        
+                        <div style="background:#f0f2f5; padding:15px; border-radius:8px; margin:20px 0;">
+                            <h4 style="margin-top:0;">Editar Roles</h4>
+                            <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:10px;">
+                                <div class="input-group"><label>Correo</label><input type="email" placeholder="usuario@org.com"></div>
+                                <div class="input-group"><label>Rol Asignado</label><select><option>Admin General</option><option>Visor</option></select></div>
+                                <div class="input-group" style="display:flex; align-items:end;"><button class="btn btn-primary" style="width:100%;">Asignar</button></div>
+                            </div>
+                        </div>
+
+                        <table>
+                            <thead>
+                                <tr><th>Usuario</th><th>Rol</th><th>Estado</th><th>Acciones</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>admin@sindicato.com</td>
+                                    <td><strong>Administrador</strong></td>
+                                    <td><span style="color:green">Activo</span></td>
+                                    <td><button class="btn" style="padding:5px 10px; font-size:0.8rem; background:#ddd;">Editar</button></td>
+                                </tr>
+                                <tr>
+                                    <td>audit@sindicato.com</td>
+                                    <td><strong>Auditor</strong></td>
+                                    <td><span style="color:orange">Inactivo</span></td>
+                                    <td><button class="btn" style="padding:5px 10px; font-size:0.8rem; background:#ddd;">Editar</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <script src="/js/noreturn.js"></script>
+</body>
+</html>

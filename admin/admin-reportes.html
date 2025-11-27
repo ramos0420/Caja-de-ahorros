@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Reportes</title>
+    <link rel="icon" type="image/png" href="/images/LogoCircular.png">
+    <link rel="stylesheet" href="/css/general.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        
+        <aside class="sidebar">
+            <img src="/images/LogoCircular.png" alt="Logo">
+            <div style="text-align:center; font-weight:bold; color:white; margin-bottom:10px; opacity:0.9;">ADMINISTRACIÓN</div>
+            
+            <nav>
+                <a class="nav-link" href="admin-inicio.html"> Inicio</a>
+                <a class="nav-link" href="admin-gestion.html">Gestión Ahorradores</a>
+                <a class="nav-link" href="admin-ahorros.html"> Ahorros</a>
+                <a class="nav-link" href="admin-prestamos.html"> Préstamos</a>
+                <a class="nav-link active" href="admin-reportes.html">Reportes</a>
+                
+                <a class="nav-link" onclick="cerrarSesion()" style="margin-top:auto; color:#ff6b6b;">
+                    Cerrar Sesión
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="container">
+                
+                <header style="margin-bottom:30px;">
+                    <h2>Reportes</h2>
+                    <p style="color:var(--text-muted);">Generación y exportación de informes operativos.</p>
+                </header>
+
+                <div id="reportes" class="section-panel active">
+                    <div class="card">
+                        <h3>Generación de Reportes Operativos</h3>
+                        
+                        <div style="display:flex; gap:15px; align-items:end; margin-bottom:20px; background:#f9f9f9; padding:15px; border-radius:8px;">
+                            <div class="input-group" style="margin:0; flex:1;">
+                                <label>Reporte</label>
+                                <select>
+                                    <option>Listado General de Socios</option>
+                                    <option>Reporte de Colocación (Préstamos)</option>
+                                    <option>Reporte de Captación (Ahorros)</option>
+                                    <option>Cartera Vencida (Morosos)</option>
+                                </select>
+                            </div>
+                            <div class="input-group" style="margin:0; flex:1;">
+                                <label>Periodo</label>
+                                <select><option>Mes Actual</option><option>Mes Anterior</option><option>Año en curso</option></select>
+                            </div>
+                            <button class="btn btn-primary">Generar Vista</button>
+                            <button class="btn btn-secondary">Exportar Excel</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <script src="/js/noreturn.js"></script>
+</body>
+</html>

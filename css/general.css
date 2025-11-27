@@ -1,0 +1,110 @@
+:root {
+  --primary:      #2a3472; /* Azul Institucional */
+  --secondary:    #d18819; /* Dorado */
+  --accent:       #ffde59; /* Amarillo */
+  --bg-app:       #f0f2f5; /* Fondo gris suave */
+  --bg-white:     #ffffff;
+  --text-dark:    #1c1e21;
+  --text-muted:   #606770;
+  --border-color: #dadde1;
+  --radius:       8px;
+  --shadow-card:  0 1px 3px rgba(0,0,0,0.1);
+  --font-main:    'Segoe UI', 'Roboto', sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--bg-app);
+  color: var(--text-dark);
+  font-size: 15px;
+}
+
+.dashboard-layout { display: flex; min-height: 100vh; }
+
+.sidebar {
+  width: 260px;
+  background-color: var(--primary);
+  color: white;
+  display: flex; flex-direction: column;
+  position: fixed; top: 0; bottom: 0; left: 0; z-index: 100;
+  box-shadow: 4px 0 15px rgba(0,0,0,0.1);
+}
+
+/* Sidebar específico para SUPER USUARIO (Negro elegante) */
+.sidebar.root-sidebar {
+    background: linear-gradient(180deg, #1a1a1a 0%, #000000 100%);
+}
+
+.sidebar img {
+  width: 100px; margin: 20px auto; display: block;
+}
+
+.sidebar nav { padding: 20px 10px; flex: 1; display: flex; flex-direction: column; gap: 5px; }
+
+.nav-link {
+  padding: 12px 15px;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  border-radius: var(--radius);
+  transition: all 0.2s;
+  border-left: 4px solid transparent;
+  cursor: pointer; /* Importante para que parezca botón */
+}
+
+.nav-link:hover { background: rgba(255,255,255,0.1); color: white; }
+.nav-link.active {
+  background: rgba(255,255,255,0.15);
+  color: var(--accent);
+  border-left-color: var(--accent);
+  font-weight: bold;
+}
+
+/* Contenido */
+.main-content { margin-left: 260px; padding: 40px; width: 100%; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+.card {
+  background: var(--bg-white);
+  padding: 25px; border-radius: var(--radius);
+  box-shadow: var(--shadow-card); margin-bottom: 20px;
+  border: 1px solid var(--border-color);
+}
+
+h2, h3 { margin-top: 0; color: var(--primary); }
+
+.btn {
+  padding: 10px 20px; border: none; border-radius: var(--radius);
+  cursor: pointer; font-weight: 600; transition: 0.2s;
+  text-decoration: none; display: inline-block;
+}
+.btn-primary { background: var(--primary); color: white; }
+.btn-primary:hover { background: #1f2655; }
+.btn-secondary { background: var(--secondary); color: white; }
+.btn-secondary:hover { background: #b07010; }
+
+table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+th { background: #f0f2f5; color: var(--text-muted); padding: 12px; text-align: left; border-bottom: 2px solid #ddd; }
+td { padding: 12px; border-bottom: 1px solid #eee; }
+
+.input-group { margin-bottom: 15px; }
+.input-group label { display: block; margin-bottom: 5px; font-weight: 500; }
+.input-group input, .input-group select {
+  width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: var(--radius);
+}
+
+/* LOGIN */
+.login-page {
+  background: linear-gradient(135deg, var(--primary), #1f2655);
+  height: 100vh; display: flex; align-items: center; justify-content: center;
+}
+.login-card { width: 100%; max-width: 450px; text-align: center; padding: 40px; }
+
+/* UTILIDADES DE NAVEGACIÓN */
+.section-panel { display: none; animation: fadeIn 0.3s ease; }
+.section-panel.active { display: block; }
+.hidden { display: none !important; }
+
+@keyframes fadeIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }

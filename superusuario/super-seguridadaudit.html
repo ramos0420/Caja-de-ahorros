@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Super Usuario - Root (Seguridad/Audit)</title>
+    <link rel="icon" type="image/png" href="/images/LogoCircular.png">
+    <link rel="stylesheet" href="/css/general.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        
+        <aside class="sidebar">
+            <img src="/images/LogoCircular.png" alt="Logo">
+            <div style="text-align:center; color:var(--accent); font-weight:bold; margin-bottom:5px;">SUPER USUARIO</div>
+            <nav>
+                <a class="nav-link" href="super-inicio.html"> Configuración</a>
+                <a class="nav-link" href="super-gestionadmin.html"> Gestión Usuarios</a>
+                <a class="nav-link active" href="super-seguridadaudit.html">Seguridad/Audit</a>
+                <a class="nav-link" href="super-mantenimiento.html"> Mantenimiento</a>
+                <a class="nav-link" href="super-reportesglobales.html">Reportes Globales</a>
+                
+                <a class="nav-link" onclick="cerrarSesion()" style="margin-top:auto; color:#ff6b6b;">
+                    Cerrar Sesión
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="container">
+                <h2 style="margin-bottom:30px; color:#333;">Panel de Control Maestro</h2>
+
+                <div id="seguridad" class="section-panel active">
+                    <div class="card">
+                        <h3>Bitácora de Seguridad (Logs)</h3>
+                        
+                        <div style="display:flex; gap:10px; margin-bottom:20px; background:#f9f9f9; padding:15px; border-radius:8px;">
+                            <div class="input-group" style="margin:0; flex:1;">
+                                <label>Buscar</label>
+                                <input type="text" placeholder="Usuario, IP o Acción...">
+                            </div>
+                            <div class="input-group" style="margin:0; flex:1;">
+                                <label>Fecha</label>
+                                <input type="date">
+                            </div>
+                            <button class="btn btn-primary" style="height:46px; align-self:end;">Filtrar</button>
+                            <button class="btn btn-secondary" style="height:46px; align-self:end;">Exportar</button>
+                        </div>
+
+                        <table>
+                            <thead>
+                                <tr><th>Fecha/Hora</th><th>Usuario</th><th>Acción</th><th>IP</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>19/11/2025 14:30</td>
+                                    <td>admin@sindicato.com</td>
+                                    <td>Aprobó préstamo #8492</td>
+                                    <td>192.168.1.15</td>
+                                </tr>
+                                <tr>
+                                    <td>19/11/2025 14:10</td>
+                                    <td>root@sindicato.com</td>
+                                    <td>Modificó Tasa Interés</td>
+                                    <td>10.0.0.5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <script src="/js/noreturn.js"></script>
+</body>
+</html>

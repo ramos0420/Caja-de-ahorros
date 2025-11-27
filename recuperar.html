@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/images/LogoCircular.png">
+    <title>Recuperar Cuenta - Caja de Ahorro</title>
+    <link rel="stylesheet" href="css/login.css"> 
+</head>
+<body class="login-page">
+
+    <div class="card login-card">
+        <img src="/images/LogoHorizontal1.png" alt="Logo" style="width:200px; margin-bottom:20px;">
+        
+        <div>
+            <h2>Recuperar Contraseña</h2>
+            <p style="color:var(--text-muted); margin-bottom: 25px;">
+                Ingresa tu **correo electrónico** y te enviaremos instrucciones para restablecer tu contraseña.
+            </p>
+            
+            <form id="recuperarForm">
+                <div class="input-group">
+                    <input type="email" id="correo" placeholder="Correo Electrónico Registrado" required>
+                </div>
+                            
+                <button type="submit" class="btn btn-primary" style="width:100%">ENVIAR INSTRUCCIONES</button>
+            </form>
+
+
+            <p class="mt-20">
+                <a href="login.html" class="link-action">Regresar al inicio de sesión</a> 
+            </p>
+        </div>
+
+    </div>
+    <script src="/js/recuperar.js"></script>
+</body>
+</html>
